@@ -1,0 +1,517 @@
+:root {
+  --md-primary-fg-color: #9901FA;
+  --md-accent-fg-color: #8e69c2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'JetBrains Mono', Arial, sans-serif;
+  background-color: #212121;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* === Layout === */
+.md-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.md-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 60px;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+  gap: 2rem;
+}
+
+.md-header__title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.md-header__logo {
+  height: 45px;
+  width: auto;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.md-header__logo:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 1em #9901FA);
+}
+
+.md-header__site-name {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* === Табы (верхняя панель) === */
+.md-tabs {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.md-tabs__inner {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.md-tabs__item {
+  margin: 0;
+}
+
+.md-tabs__link {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #e0dede;
+  display: block;
+  margin: 0;
+  transition: all 0.25s ease-in-out;
+  text-decoration: none;
+}
+
+.md-tabs__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+}
+
+.md-tabs__item--active > .md-tabs__link {
+  color: #a379df;
+}
+
+.md-main {
+  display: flex;
+  flex: 1;
+  min-height: calc(100vh - 60px);
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+.md-sidebar--primary {
+  position: fixed;
+  left: 0;
+  top: 60px;
+  width: 360px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  z-index: 10;
+  padding: 1rem 0.5rem;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+.md-main__content {
+  flex: 1;
+  margin-left: 360px;
+  margin-right: 170px;
+  padding: 1.5rem 2rem;
+  max-width: none;
+}
+
+.md-main__content--no-sidebar {
+  margin-left: 170px;
+}
+
+/* === Контент (markdown) === */
+.md-content {
+  background-color: transparent;
+}
+
+.md-content.md-rendered {
+  line-height: 1.6;
+}
+
+.md-content.md-rendered h1:first-child {
+  margin-top: 0;
+}
+
+.md-content a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.md-content a:hover {
+  text-decoration: underline;
+}
+
+.md-content.md-loading,
+.md-content.md-error {
+  padding: 2rem;
+}
+
+/* === Заголовки === */
+.md-content h1,
+.md-content h2,
+.md-content h3,
+.md-content h4,
+.md-content h5,
+.md-content h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.md-content hr {
+  color: #8d8d8d9c;  
+}
+
+/* === Блок кода === */
+.md-content pre {
+  background-color: #151B23 !important;
+  color: #e6edf3 !important;
+  padding: 0;
+  border-radius: 6px;
+  border: 0px solid #30363d !important;
+  overflow-x: auto;
+  margin: 1em;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+  position: relative;
+}
+
+.md-content code {
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+  background-color: #151B23;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+  color: #e6edf3;
+}
+
+/* Inline код не должен иметь фон внутри pre */
+.md-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.md-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* === Блок кода с подсветкой (стиль GitHub) === */
+.md-code-block {
+  position: relative;
+  margin: 1em 0;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  overflow: hidden;
+  background-color: #151B23;
+}
+
+.md-code-block:hover .md-code-block__copy {
+  opacity: 1;
+}
+
+.md-code-block__copy {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  background-color: rgba(22, 27, 34, 0.9);
+  border: 1px solid #30363d;
+  color: #8b949e;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0;
+  line-height: 0;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.md-code-block:hover .md-code-block__copy {
+  color: #c9d1d9;
+}
+
+.md-code-block__copy:hover {
+  background-color: rgba(22, 27, 34, 0.95);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.md-code-block__copy:active {
+  transform: scale(0.95);
+}
+
+.md-code-block__copy svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.md-code-block__pre {
+  margin: 0;
+  padding: 2.25rem 1rem 1rem;
+  overflow-x: auto;
+  background-color: #151B23;
+  color: #e6edf3;
+  font-family: 'Fira Code', 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.md-code-block__pre code {
+  border-radius: 0;
+}
+
+/* Стили для react-syntax-highlighter */
+.md-code-block .hljs,
+.md-code-block pre[class*="language-"] {
+  background: #151B23 !important;
+  color: #e6edf3 !important;
+}
+
+/* Переопределение стилей SyntaxHighlighter для лучшей интеграции */
+.md-code-block > div[class*="SyntaxHighlighter"] {
+  margin: 0 !important;
+  padding: 2.25rem 1rem 1rem !important;
+  background: #151B23 !important;
+  border-radius: 6px !important;
+}
+
+.md-code-block > div[class*="SyntaxHighlighter"] pre {
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+/* === Таблицы === */
+.md-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 6px;
+}
+
+.md-content th,
+.md-content td {
+  border: 1px solid #30363d;
+  padding: 10px;
+  color: #e0e0e0;
+}
+
+/* === Цитаты (blockquote) === */
+.md-content blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 4px solid var(--md-primary-fg-color);
+  background-color: rgba(163, 121, 223, 0.08);
+  color: #c0c0c0;
+}
+
+/* === Навигация (sidebar) === */
+.md-nav {
+  padding: 0;
+}
+
+.md-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.md-nav__list--nested {
+  padding-left: 1rem;
+  margin-top: 0.25rem;
+  border-left: 2px solid rgba(163, 121, 223, 0.35);
+  margin-left: 4px;
+}
+
+.md-nav__item {
+  margin: 0;
+}
+
+.md-nav__link {
+  display: block;
+  padding: 10px 15px;
+  border-radius: 0 6px 6px 0;
+  color: #c0c0c0;
+  font-weight: 1000;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+  border-left: 3px solid transparent;
+  margin-left: 0;
+}
+
+.md-nav__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+.md-sidebar--primary .md-nav__link:hover:not(.md-nav__link--active) {
+  transform: translateX(4px);
+}
+
+.md-nav__link--active {
+  color: var(--md-primary-fg-color) !important;
+  font-weight: 600;
+  border-left-color: var(--md-primary-fg-color);
+  background-color: rgba(163, 121, 223, 0.12);
+}
+
+.md-nav__title {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: #a0a0a0;
+  font-weight: 1200;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* === Изображения в контенте === */
+.md-content img {
+  max-width: 100%;
+  padding: 10px 15px;
+  border-radius: 25px;
+  transition: transform 0.2s ease;
+}
+
+.md-content img:hover {
+  transform: scale(1.04);
+}
+
+/* === Бургер(для мобилок) === */
+.md-burger {
+  display: none;
+}
+
+/* === Мобильные стили === */
+@media (max-width: 768px) {
+  .md-header__inner {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0.1rem 1rem;
+    align-items: center;
+  }
+
+  .md-header__title {
+    flex-shrink: 0;
+  }
+
+  .md-burger {
+    display: block;
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+  }
+
+  .md-tabs {
+    position: fixed;
+    top: 61px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    padding: 0.5rem 1rem;
+    background-color: #212121;
+    box-sizing: border-box;
+    z-index: 900;
+    justify-content: flex-start;
+  }
+
+  .md-tabs__inner {
+    gap: 0.25rem;
+    display: flex;
+  }
+
+  .md-tabs__link {
+    flex-shrink: 0;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .md-sidebar--primary {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: calc(100vh - 60px);
+    background-color: #212121;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    padding: 1rem;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+  }
+
+  .md-sidebar--primary.is-open {
+    transform: translateX(0);
+  }
+
+  .md-main__content {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
+    padding-top: 2.5rem;
+  }
+
+  .md-main__content--no-sidebar {
+    margin-left: 0;
+  }
+
+  .md-header {
+    background-color: #212121;
+  }
+}
