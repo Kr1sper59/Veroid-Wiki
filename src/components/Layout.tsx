@@ -76,6 +76,9 @@ export default function Layout() {
           <Outlet />
         </div>
       </main>
+      <footer className='layout__footer'>
+            Created by Kr1sper_
+      </footer>
     </div>
   )
 }
