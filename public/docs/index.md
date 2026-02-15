@@ -6,6 +6,7 @@
 
 Если вам нужна дополнительная помощь: обращайтесь в тикеты в нашем [Discord](https://discord.com/invite/Tck8WMDqRz) сообществе, или в [техническую поддержку](https://dash.veroid.net/ticket) биллинга - Мы рады вам помочь!
 ## Список страниц
+- [Ядра](guides/kernel)
 - [Смена версии](guides/version)
 - [Подключение к SFTP](guides/sftp)
 - [Подключение своего домена к серверу](guides/domain)
