@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import Tabs, { getCurrentTab } from './Tabs'
 import { NAV } from '../routes'
+import ImageLightbox from './Image'
 
 export default function Layout() {
   const location = useLocation()
@@ -69,15 +70,19 @@ export default function Layout() {
 
         <div
           className={`md-main__content ${sidebarItems.length === 0
-              ? 'md-main__content--no-sidebar'
-              : ''
+            ? 'md-main__content--no-sidebar'
+            : ''
             }`}
         >
-          <Outlet />
+          <main className="layout__content">
+            <ImageLightbox>
+              <Outlet />
+            </ImageLightbox>
+          </main>
         </div>
       </main>
       <footer className='layout__footer'>
-            Created by Kr1sper_
+        Created by Kr1sper_
       </footer>
     </div>
   )
