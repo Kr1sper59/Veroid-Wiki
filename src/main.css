@@ -428,27 +428,6 @@ body {
   display: none;
 }
 
-.layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.layout__body {
-  flex: 1;
-  display: flex;
-  position: relative;
-}
-
-.layout__content {
-  flex: 1;
-  padding: 24px;
-}
-
-.layout__content--full {
-  margin-left: 0;
-}
-
 .layout__footer {
   text-align: center;
   padding: 16px;
