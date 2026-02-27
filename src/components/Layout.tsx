@@ -1,4 +1,4 @@
-import { Outlet, useLocation } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
 import Tabs, { getCurrentTab } from './Tabs'
@@ -26,16 +26,16 @@ export default function Layout() {
     <div className="md-container">
       <header className="md-header">
         <div className="md-header__inner">
-          <a href="/" className="md-header__title">
+          <Link to="/" className="md-header__title">
             <img
-              src="/assets/logo.ico"
+              src="/assets/logo.png"
               alt="Veroid Wiki"
               className="md-header__logo"
             />
             <span className="md-header__site-name">
               Veroid Wiki
             </span>
-          </a>
+          </Link>
 
           <Tabs />
           {sidebarItems.length > 0 && (

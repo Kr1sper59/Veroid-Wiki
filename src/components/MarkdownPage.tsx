@@ -44,6 +44,10 @@ export default function MarkdownPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
+  const baseUrl = import.meta.env.BASE_URL || '/'
+  const baseNoTrailingSlash = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl
+  const docsBase = `${baseUrl}docs/`
+
   const docPath = getDocPath(location.pathname)
   const currentDocPath = getCurrentDocPath(location.pathname)
 
@@ -56,7 +60,7 @@ export default function MarkdownPage() {
     }
     setLoading(true)
     setError(null)
-    const url = `/docs/${encodeURI(docPath)}`
+    const url = `${docsBase}${encodeURI(docPath)}`
     fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
@@ -90,12 +94,16 @@ export default function MarkdownPage() {
   }
 
   const imageBase = currentDocPath
-    ? `/docs/${currentDocPath.replace(/\/[^/]+$/, '')}/`
-    : '/docs/'
+    ? `${docsBase}${currentDocPath.replace(/\/[^/]+$/, '')}/`
+    : docsBase
 
   const resolveImageSrc = (src: string | undefined): string => {
-    if (!src || src.startsWith('http://') || src.startsWith('https://') || src.startsWith('/'))
-      return src ?? ''
+    if (!src) return ''
+    if (src.startsWith('http://') || src.startsWith('https://')) return src
+    if (src.startsWith('/')) {
+      if (baseNoTrailingSlash && src.startsWith(baseNoTrailingSlash + '/')) return src
+      return `${baseNoTrailingSlash}${src}`
+    }
     return imageBase + src.replace(/^\.\//, '')
   }
 

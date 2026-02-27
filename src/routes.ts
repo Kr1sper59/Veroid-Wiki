@@ -33,7 +33,7 @@ export const NAV: NavItem[] = [
     children: [
       { label: 'Главная', path: '/', docPath: 'index.md' },
       { label: 'Ядра', path: 'guides/kernel', docPath: 'guides/kernel.md' },    
-      { label: 'Смена версии', path: 'guides/version', docPath: 'guides/versoin.md' },
+      { label: 'Смена версии', path: 'guides/version', docPath: 'guides/version.md' },
       { label: 'Подключение к SFTP', path: 'guides/sftp', docPath: 'guides/sftp.md' },
       { label: 'Подключение своего домена к серверу', path: 'guides/domain', docPath: 'guides/domain.md' },
       { label: 'Spark', path: 'guides/spark', docPath: 'guides/spark.md' },
