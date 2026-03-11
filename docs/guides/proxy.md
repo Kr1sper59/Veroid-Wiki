@@ -50,6 +50,3 @@ try = [
     secret: #Вставьте содержимое файла forwarding.secret с Velocity сервера.
 ```
 3. Перезапустите сервер.
-
-## BungeeCord
-### Скоро...
