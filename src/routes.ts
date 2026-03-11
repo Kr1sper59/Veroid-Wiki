@@ -10,6 +10,7 @@ export const DOC_PATH_BY_ROUTE: Record<string, string> = {
   '/guides/kernel': 'guides/kernel.md',
   '/guides/version': 'guides/version.md',
   '/guides/sftp': 'guides/sftp.md',
+  '/guides/plugins': 'guides/plugins.md',
   '/guides/domain': 'guides/domain.md',
   '/guides/spark': 'guides/spark.md',
   '/guides/server.propertis': 'guides/server.propertis.md',
@@ -27,13 +28,14 @@ export const DOC_PATH_TO_ROUTE: Record<string, string> = Object.fromEntries(
 
 export const NAV: NavItem[] = [
   {
-    label: 'Главная',
+    label: 'Официальные гайды',
     path: '/',
     docPath: 'index.md',
     children: [
-      { label: 'Главная', path: '/', docPath: 'index.md' },
+      { label: 'Введение', path: '/', docPath: 'index.md' },
       { label: 'Ядра', path: 'guides/kernel', docPath: 'guides/kernel.md' },    
       { label: 'Смена версии', path: 'guides/version', docPath: 'guides/version.md' },
+      { label: 'Плагины', path: 'guides/plugins', docPath: 'guides/plugins.md' },
       { label: 'Подключение к SFTP', path: 'guides/sftp', docPath: 'guides/sftp.md' },
       { label: 'Подключение своего домена к серверу', path: 'guides/domain', docPath: 'guides/domain.md' },
       { label: 'Spark', path: 'guides/spark', docPath: 'guides/spark.md' },

@@ -7,7 +7,7 @@ interface Tab {
 }
 
 const TABS: Tab[] = [
-  { label: 'Главная', path: '/', basePath: '/' },
+  { label: 'Официальные гайды', path: '/', basePath: '/' },
   { label: 'Гайды коммюнити', path: '/community', basePath: '/community' },
 ]
 

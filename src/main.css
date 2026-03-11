@@ -76,7 +76,7 @@ body {
   font-weight: 800;
 }
 
-/* === Табы (верхняя панель) === */
+/* === Табы === */
 .md-tabs {
   display: flex;
   background-color: transparent;
@@ -119,6 +119,7 @@ body {
   color: #a379df;
 }
 
+/* === Main === */
 .md-main {
   display: flex;
   flex: 1;
@@ -221,7 +222,6 @@ body {
   color: #e6edf3;
 }
 
-/* Inline код не должен иметь фон внутри pre */
 .md-content pre code {
   background: none;
   padding: 0;
@@ -234,7 +234,6 @@ body {
   color: inherit;
 }
 
-/* === Блок кода с подсветкой (стиль GitHub) === */
 .md-code-block {
   position: relative;
   margin: 1em 0;
@@ -305,14 +304,12 @@ body {
   border-radius: 0;
 }
 
-/* Стили для react-syntax-highlighter */
 .md-code-block .hljs,
 .md-code-block pre[class*="language-"] {
   background: #151B23 !important;
   color: #e6edf3 !important;
 }
 
-/* Переопределение стилей SyntaxHighlighter для лучшей интеграции */
 .md-code-block>div[class*="SyntaxHighlighter"] {
   margin: 0 !important;
   padding: 2.25rem 1rem 1rem !important;
@@ -332,17 +329,17 @@ body {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 1em;
-  border-radius: 6px;
 }
 
 .md-content th,
 .md-content td {
   border: 1px solid #30363d;
+  border-radius: 6px;
   padding: 10px;
   color: #e0e0e0;
 }
 
-/* === Цитаты (blockquote) === */
+/* === Цитаты === */
 .md-content blockquote {
   margin: 1em 0;
   padding: 0.5em 1em;
@@ -351,7 +348,7 @@ body {
   color: #c0c0c0;
 }
 
-/* === Навигация (sidebar) === */
+/* === Sidebar === */
 .md-nav {
   padding: 0;
 }
@@ -411,7 +408,7 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* === Изображения в контенте === */
+/* === Изображения === */
 .md-content img {
   max-width: 100%;
   padding: 10px 15px;
@@ -423,7 +420,7 @@ body {
   transform: scale(1.04);
 }
 
-/* === Бургер(для мобилок) === */
+/* === Бургер === */
 .md-burger {
   display: none;
 }

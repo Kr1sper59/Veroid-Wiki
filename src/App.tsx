@@ -10,6 +10,7 @@ export default function App() {
           <Route index element={<MarkdownPage />} />
           <Route path="guides/kernel" element={<MarkdownPage />} />
           <Route path="guides/version" element={<MarkdownPage />} />
+          <Route path="guides/plugins" element={<MarkdownPage />} />
           <Route path="guides/sftp" element={<MarkdownPage />} />
           <Route path="guides/domain" element={<MarkdownPage />} />
           <Route path="guides/spark" element={<MarkdownPage />} />
