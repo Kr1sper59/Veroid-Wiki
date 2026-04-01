@@ -13,7 +13,7 @@ export const DOC_PATH_BY_ROUTE: Record<string, string> = {
   '/guides/plugins': 'guides/plugins.md',
   '/guides/domain': 'guides/domain.md',
   '/guides/spark': 'guides/spark.md',
-  '/guides/server.propertis': 'guides/server.propertis.md',
+  '/guides/server.propertis': 'guides/server.properties.md',
   '/guides/proxy': 'guides/proxy.md',
   '/community': 'community/index.md',
   '/community/discord': 'community/discord.md',
@@ -39,7 +39,7 @@ export const NAV: NavItem[] = [
       { label: 'Подключение к SFTP', path: 'guides/sftp', docPath: 'guides/sftp.md' },
       { label: 'Подключение своего домена к серверу', path: 'guides/domain', docPath: 'guides/domain.md' },
       { label: 'Spark', path: 'guides/spark', docPath: 'guides/spark.md' },
-      { label: 'Server.propertis', path: 'guides/server.propertis', docPath: 'guides/server.propertis.md' },
+      { label: 'Server.properties', path: 'guides/server.properties', docPath: 'guides/server.properties.md' },
       { label: 'Настройка прокси сервера', path: 'guides/proxy', docPath: 'guides/proxy.md' },
     ]
   },

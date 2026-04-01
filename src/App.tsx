@@ -14,7 +14,7 @@ export default function App() {
           <Route path="guides/sftp" element={<MarkdownPage />} />
           <Route path="guides/domain" element={<MarkdownPage />} />
           <Route path="guides/spark" element={<MarkdownPage />} />
-          <Route path="guides/server.propertis" element={<MarkdownPage />} />
+          <Route path="guides/server.properties" element={<MarkdownPage />} />
           <Route path="guides/proxy" element={<MarkdownPage />} />
           <Route path="community" element={<MarkdownPage />} />
           <Route path="community/discord" element={<MarkdownPage />} />
