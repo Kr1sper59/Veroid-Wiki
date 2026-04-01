@@ -13,7 +13,7 @@ export const DOC_PATH_BY_ROUTE: Record<string, string> = {
   '/guides/plugins': 'guides/plugins.md',
   '/guides/domain': 'guides/domain.md',
   '/guides/spark': 'guides/spark.md',
-  '/guides/server.propertis': 'guides/server.properties.md',
+  '/guides/server.properties': 'guides/server.properties.md',
   '/guides/proxy': 'guides/proxy.md',
   '/community': 'community/index.md',
   '/community/discord': 'community/discord.md',
