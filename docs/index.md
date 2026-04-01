@@ -12,5 +12,5 @@
 - [Подключение к SFTP](guides/sftp)
 - [Подключение своего домена к серверу](guides/domain)
 - [Spark](guides/spark)
-- [Server.propertis](guides/server.propertis)
+- [Server.properties](guides/server.properties)
 - [Настройка прокси сервера](guides/proxy)
