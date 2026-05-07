@@ -141,21 +141,12 @@ export default function MarkdownPage() {
               )
             }
             return (
-              <code className={className} {...props}>
-                {children}
-              </code>
+              <CodeBlock className={className}>
+                {String(children)}
+              </CodeBlock>
             )
           },
-          pre: ({ children, ...props }: any) => {
-            if (children && typeof children === 'object' && 'props' in children) {
-              const codeProps = children.props
-              const className = codeProps?.className || ''
-              const codeString = String(codeProps.children || '').replace(/\n$/, '')
-              return <CodeBlock className={className}>{codeString}</CodeBlock>
-            }
-            
-            return <pre {...props}>{children}</pre>
-          },
+          pre: ({ children }: any) => <>{children}</>,
         }}
       >
         {content}

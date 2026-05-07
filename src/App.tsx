@@ -1,6 +1,15 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import MarkdownPage from './components/MarkdownPage'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './main.css'
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
 
 export default function App() {
   return (

@@ -82,7 +82,7 @@ export default function Layout() {
         </div>
       </main>
       <footer className='layout__footer'>
-        <a href="https://github.com/Kr1sper59">
+        <a href="https://kr1sper.ru">
           Created by Kr1sper_
         </a>
       </footer>

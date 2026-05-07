@@ -7,6 +7,47 @@ interface CodeBlockProps {
   className?: string
 }
 
+function normalizeCode(raw: string): string {
+  const withoutTrailingNewline = raw.replace(/\n$/, '')
+  const lines = withoutTrailingNewline.split('\n')
+
+  if (lines[0]?.trim() === '') {
+    lines.shift()
+  }
+
+  const indents = lines
+    .filter((line) => line.trim() !== '')
+    .map((line) => {
+      const match = line.match(/^[\t ]*/)
+      return match ? match[0].length : 0
+    })
+
+  const minIndent = indents.length > 0 ? Math.min(...indents) : 0
+  let normalized = lines
+  if (minIndent > 0) {
+    normalized = lines.map((line) => line.slice(minIndent))
+  }
+
+  const firstNonEmptyIndex = normalized.findIndex((line) => line.trim() !== '')
+  if (firstNonEmptyIndex !== -1) {
+    const firstIndent = (normalized[firstNonEmptyIndex].match(/^[\t ]*/) ?? [''])[0].length
+    const followingIndents = normalized
+      .slice(firstNonEmptyIndex + 1)
+      .filter((line) => line.trim() !== '')
+      .map((line) => ((line.match(/^[\t ]*/) ?? [''])[0].length))
+
+    if (followingIndents.length > 0) {
+      const nextMinIndent = Math.min(...followingIndents)
+      if (firstIndent > nextMinIndent) {
+        const trimBy = firstIndent - nextMinIndent
+        normalized[firstNonEmptyIndex] = normalized[firstNonEmptyIndex].slice(trimBy)
+      }
+    }
+  }
+
+  return normalized.join('\n')
+}
+
 const CopyIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
     <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
@@ -22,7 +63,7 @@ const CheckIcon = () => (
 
 export default function CodeBlock({ children, className }: CodeBlockProps) {
   const [copied, setCopied] = useState(false)
-  const code = String(children).replace(/\n$/, '')
+  const code = normalizeCode(String(children))
 
   const match = /language-(\w+)/.exec(className || '')
   const language = match ? match[1] : ''
@@ -63,14 +104,15 @@ export default function CodeBlock({ children, className }: CodeBlockProps) {
     <div className="md-code-block">
       {copyButton}
       <SyntaxHighlighter
+        className="md-code-block__syntax"
         language={language}
         style={vscDarkPlus}
         customStyle={{
           margin: 0,
-          borderRadius: '6px',
+          borderRadius: 0,
           background: '#151B23',
         }}
-        PreTag="div"
+        PreTag="pre"
         codeTagProps={{
           style: {
             fontFamily: "'Fira Code', 'JetBrains Mono', monospace",
