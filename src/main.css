@@ -323,12 +323,14 @@ body {
   color: #e6edf3 !important;
 }
 
-.md-code-block__syntax {
+.md-code-block>div[class*="SyntaxHighlighter"] {
   margin: 0 !important;
+  padding: 2.25rem 1rem 1rem !important;
   background: #151B23 !important;
+  border-radius: 6px !important;
 }
 
-.md-code-block__syntax pre {
+.md-code-block>div[class*="SyntaxHighlighter"] pre {
   margin: 0 !important;
   padding: 0 !important;
   background: transparent !important;
