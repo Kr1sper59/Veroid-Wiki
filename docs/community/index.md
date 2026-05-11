@@ -11,3 +11,4 @@
 - [Как сделать переливающийся градиент в табе?](community/gradient)
 - [Настройка PlasmoVoice в связке с Velocity](community/plasmo-voice)
 - [Как оптимизировать свой сервер Minecraft](community/optimization)
+- [Фикс узла Rage 2 / Фикс подключения к Minecraft серверам](community/zapret)
