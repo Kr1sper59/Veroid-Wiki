@@ -20,4 +20,4 @@
 
 ---
 
-### Автор статьи - jimeris
+### Автор статьи - [jimeris](https://discord.com/users/780812666436059138)
