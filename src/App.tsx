@@ -30,6 +30,7 @@ export default function App() {
           <Route path="community/gradient" element={<MarkdownPage />} />
           <Route path="community/plasmo-voice" element={<MarkdownPage />} />
           <Route path="community/optimization" element={<MarkdownPage />} />
+          <Route path="community/zapret" element={<MarkdownPage />} />
         </Route>
       </Routes>
     </HashRouter>

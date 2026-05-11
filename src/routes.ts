@@ -20,6 +20,7 @@ export const DOC_PATH_BY_ROUTE: Record<string, string> = {
   '/community/gradient': 'community/gradient.md',
   '/community/plasmo-voice': 'community/plasmo-voice.md',
   '/community/optimization': 'community/optimization.md',
+  '/community/zapret': 'community/zapret.md',
 }
 
 export const DOC_PATH_TO_ROUTE: Record<string, string> = Object.fromEntries(
@@ -53,6 +54,7 @@ export const NAV: NavItem[] = [
       { label: 'Как сделать переливающийся градиент в табе?', path: 'community/gradient', docPath: 'community/gradient.md' },
       { label: 'Настройка PlasmoVoice в связке с Velocity', path: 'community/plasmo-voice', docPath: 'community/plasmo-voice.md' },
       { label: 'Как оптимизировать свой сервер Minecraft', path: 'community/optimization', docPath: 'community/optimization.md' },
+      { label: 'Фикс узла Rage 2 / Фикс подключения к Minecraft серверам', path: 'community/zapret', docPath: 'community/zapret.md' },
     ],
   },
 ]

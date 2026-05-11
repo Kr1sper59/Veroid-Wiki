@@ -8,7 +8,7 @@ interface Tab {
 
 const TABS: Tab[] = [
   { label: 'Официальные гайды', path: '/', basePath: '/' },
-  { label: 'Гайды коммюнити', path: '/community', basePath: '/community' },
+  { label: 'Гайды комьюнити', path: '/community', basePath: '/community' },
 ]
 
 export function getCurrentTab(pathname: string): Tab {

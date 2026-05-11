@@ -250,6 +250,7 @@ body {
 .md-code-block {
   position: relative;
   margin: 1em 0;
+  max-width: 1450px;
   border-radius: 6px;
   border: 1px solid #30363d;
   overflow: hidden;
