@@ -7,8 +7,9 @@
 Если нужна дополнительная помощь, создайте тикет в нашем [Discord](https://discord.com/invite/Tck8WMDqRz) или в [технической поддержке биллинга](https://dash.veroid.net/ticket).
 
 ## Полезные страницы
-- [Ядра](guides/kernel)
+- [Ядра](guides/core)
 - [Смена версии](guides/version)
+- [Плагины](guides/plugins)
 - [Подключение к SFTP](guides/sftp)
 - [Подключение своего домена к серверу](guides/domain)
 - [Spark](guides/spark)
