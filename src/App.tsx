@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import MarkdownPage from './components/MarkdownPage'
 import { StrictMode } from 'react'
@@ -13,11 +13,11 @@ createRoot(document.getElementById('root')!).render(
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MarkdownPage />} />
-          <Route path="guides/kernel" element={<MarkdownPage />} />
+          <Route path="guides/core" element={<MarkdownPage />} />
           <Route path="guides/version" element={<MarkdownPage />} />
           <Route path="guides/plugins" element={<MarkdownPage />} />
           <Route path="guides/sftp" element={<MarkdownPage />} />
@@ -33,6 +33,6 @@ export default function App() {
           <Route path="community/zapret" element={<MarkdownPage />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }

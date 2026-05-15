@@ -7,7 +7,7 @@ export interface NavItem {
 
 export const DOC_PATH_BY_ROUTE: Record<string, string> = {
   '/': 'index.md',
-  '/guides/kernel': 'guides/kernel.md',
+  '/guides/core': 'guides/core.md',
   '/guides/version': 'guides/version.md',
   '/guides/sftp': 'guides/sftp.md',
   '/guides/plugins': 'guides/plugins.md',
@@ -34,7 +34,7 @@ export const NAV: NavItem[] = [
     docPath: 'index.md',
     children: [
       { label: 'Введение', path: '/', docPath: 'index.md' },
-      { label: 'Ядра', path: 'guides/kernel', docPath: 'guides/kernel.md' },    
+      { label: 'Ядра', path: 'guides/core', docPath: 'guides/core.md' },    
       { label: 'Смена версии', path: 'guides/version', docPath: 'guides/version.md' },
       { label: 'Плагины', path: 'guides/plugins', docPath: 'guides/plugins.md' },
       { label: 'Подключение к SFTP', path: 'guides/sftp', docPath: 'guides/sftp.md' },
