@@ -1,5 +1,5 @@
 :root {
-  --md-primary-fg-color: #a855f7;
+  --md-primary-fg-color: #7c3aed;
 }
 
 html {
@@ -105,10 +105,11 @@ body {
 
 .md-tabs__link {
   padding: 0.5rem 1rem;
-  border-radius: 20px;
+  border-radius: 13px;
   color: #8b949e;
   display: block;
   margin: 0;
+  font-size: 16px;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   font-weight: 500;
@@ -120,7 +121,7 @@ body {
 }
 
 .md-tabs__item--active>.md-tabs__link {
-  color: #a855f7;
+  color: #7c3aed;
 }
 
 /* === Main === */
@@ -408,9 +409,9 @@ body {
 }
 
 .md-nav__link--active {
-  color: #a855f7 !important;
+  color: #7c3aed !important;
   font-weight: 600;
-  border-left-color: #a855f7;
+  border-left-color: #7c3aed;
   background-color: rgba(168, 85, 247, 0.1);
 }
 
@@ -554,7 +555,7 @@ body {
     width: 80%;
     max-width: 320px;
     height: calc(100vh - 60px);
-    background-color: #0d1117;
+    background-color: #17101b;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 100;
