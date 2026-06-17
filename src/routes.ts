@@ -15,6 +15,7 @@ export const DOC_PATH_BY_ROUTE: Record<string, string> = {
   '/guides/spark': 'guides/spark.md',
   '/guides/server.properties': 'guides/server.properties.md',
   '/guides/proxy': 'guides/proxy.md',
+  '/guides/voicechat': 'guides/voicechat.md',
   '/community': 'community/index.md',
   '/community/discord': 'community/discord.md',
   '/community/gradient': 'community/gradient.md',
@@ -42,6 +43,7 @@ export const NAV: NavItem[] = [
       { label: 'Spark', path: 'guides/spark', docPath: 'guides/spark.md' },
       { label: 'Server.properties', path: 'guides/server.properties', docPath: 'guides/server.properties.md' },
       { label: 'Настройка прокси сервера', path: 'guides/proxy', docPath: 'guides/proxy.md' },
+      { label: 'Настройка голосового чата', path: 'guides/voicechat', docPath: 'guides/voicechat.md' },
     ]
   },
   {

@@ -58,6 +58,7 @@ export default function MarkdownPage() {
       setError('Страница не найдена')
       return
     }
+    window.scrollTo(0, 0)
     setLoading(true)
     setError(null)
     const url = `${docsBase}${encodeURI(docPath)}`

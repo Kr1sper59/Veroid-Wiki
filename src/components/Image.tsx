@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 
 type Props = { children: React.ReactNode }
 
@@ -23,21 +24,28 @@ export default function ImageLightbox({ children }: Props) {
 
   const handleClose = () => {
     setShow(false)
-    setTimeout(() => setPreview(null), 300) 
+    setTimeout(() => setPreview(null), 300)
   }
 
   return (
     <>
       <div onClick={handleClick}>{children}</div>
 
-      {preview && (
-        <div
-          className={`lightbox ${show ? 'show' : ''}`}
-          onClick={handleClose}
-        >
-          <img src={preview} alt="Preview" className="lightbox__image" />
-        </div>
-      )}
+      {preview &&
+        createPortal(
+          <div
+            className={`lightbox ${show ? 'show' : ''}`}
+            onClick={handleClose}
+          >
+            <img
+              src={preview}
+              alt="Preview"
+              className="lightbox__image"
+            />
+          </div>,
+          document.body
+        )
+      }
     </>
   )
 }

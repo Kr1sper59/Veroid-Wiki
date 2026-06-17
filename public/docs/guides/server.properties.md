@@ -71,5 +71,4 @@ text-filtering-version=0                    # Версия фильтрации 
 use-native-transport=true                   # Использовать нативный сетевой транспорт
 view-distance=16                            # Дистанция прорисовки чанков для игроков
 white-list=false                            # Включение белого списка
-
 ```
