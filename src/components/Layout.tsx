@@ -28,7 +28,7 @@ export default function Layout() {
         <div className="md-header__inner">
           <Link to="/" className="md-header__title">
             <img
-              src="https://github.com/Kr1sper59/Veroid-Wiki/blob/main/dist/assets/logo.png?raw=true"
+              src="assets/logo.png"
               alt="Veroid Wiki"
               className="md-header__logo"
             />
