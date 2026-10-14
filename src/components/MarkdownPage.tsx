@@ -53,12 +53,15 @@ export default function MarkdownPage() {
 
   useEffect(() => {
     if (!docPath) {
-      setContent('')
-      setLoading(false)
-      setError('Страница не найдена')
+      setTimeout(() => {
+        setContent('')
+        setLoading(false)
+        setError('Страница не найдена')
+      }, 0)
       return
     }
     window.scrollTo(0, 0)
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true)
     setError(null)
     const url = `${docsBase}${encodeURI(docPath)}`
@@ -75,7 +78,7 @@ export default function MarkdownPage() {
         setContent('')
       })
       .finally(() => setLoading(false))
-  }, [docPath])
+  }, [docPath, docsBase])
 
   if (loading) {
     return (
@@ -133,9 +136,8 @@ export default function MarkdownPage() {
           img: ({ src, alt, ...props }) => (
             <img src={resolveImageSrc(src)} alt={alt ?? ''} loading="lazy" {...props} />
           ),
-          code: ({ node, inline, className, children, ...props }: any) => {
+          code: ({ inline, className, children, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) => {
             const text = String(children ?? '')
-            // rehypeRaw may break inline code into block; force inline if no newlines and short
             const isReallyInline = (!text.includes('\n') && text.length < 200) || inline === true
             if (isReallyInline) {
               return (
@@ -150,7 +152,7 @@ export default function MarkdownPage() {
               </CodeBlock>
             )
           },
-          pre: ({ children }: any) => <pre>{children}</pre>,
+          pre: ({ children }: { children?: React.ReactNode }) => <pre>{children}</pre>,
         }}
       >
         {content}

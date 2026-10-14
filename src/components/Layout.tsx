@@ -1,7 +1,8 @@
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import Sidebar from './Sidebar'
-import Tabs, { getCurrentTab } from './Tabs'
+import Tabs from './Tabs'
+import { getCurrentTab } from './tabs'
 import { NAV } from '../routes'
 import ImageLightbox from './Image'
 
@@ -15,6 +16,7 @@ export default function Layout() {
   const sidebarItems = currentNavItem?.children || []
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setMobileOpen(false)
   }, [location.pathname])
 
@@ -82,7 +84,7 @@ export default function Layout() {
         </div>
       </main>
       <footer className='layout__footer'>
-        <a href="https://kr1sper.ru">
+        <a href="https://kr1sper.com">
           Created by Kr1sper_
         </a>
       </footer>

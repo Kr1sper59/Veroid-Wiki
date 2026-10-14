@@ -11,8 +11,6 @@ export default function ImageLightbox({ children }: Props) {
     if (preview) {
       const timeout = setTimeout(() => setShow(true), 10)
       return () => clearTimeout(timeout)
-    } else {
-      setShow(false)
     }
   }, [preview])
 
