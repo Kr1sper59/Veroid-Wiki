@@ -46,6 +46,9 @@ export const NAV: NavItem[] = [
       { label: 'Введение', path: '/', docPath: 'index.md' },
       { label: 'Терминология хостинга', path: 'guides/terms', docPath: 'guides/terms.md' },
       { label: 'Работа с панелью', path: 'guides/panel', docPath: 'guides/panel.md' },
+      { label: 'Бэкапы', path: 'guides/backups', docPath: 'guides/backups.md' },
+      { label: 'Миры', path: 'guides/worlds', docPath: 'guides/worlds.md' },
+      { label: 'Права (Permissions)', path: 'guides/permissions', docPath: 'guides/permissions.md' },
       { label: 'Ядра', path: 'guides/core', docPath: 'guides/core.md' },
       { label: 'Смена версии', path: 'guides/version', docPath: 'guides/version.md' },
       { label: 'Плагины', path: 'guides/plugins', docPath: 'guides/plugins.md' },
@@ -56,11 +59,7 @@ export const NAV: NavItem[] = [
       { label: 'Server.properties', path: 'guides/server.properties', docPath: 'guides/server.properties.md' },
       { label: 'Настройка прокси сервера', path: 'guides/proxy', docPath: 'guides/proxy.md' },
       { label: 'Настройка голосового чата', path: 'guides/voicechat', docPath: 'guides/voicechat.md' },
-      { label: 'Бэкапы', path: 'guides/backups', docPath: 'guides/backups.md' },
-      { label: 'Миры', path: 'guides/worlds', docPath: 'guides/worlds.md' },
-      { label: 'Права (Permissions)', path: 'guides/permissions', docPath: 'guides/permissions.md' },
       { label: 'Ресурс-пак', path: 'guides/resourcepack', docPath: 'guides/resourcepack.md' },
-
       { label: 'Частые вопросы и ошибки', path: 'guides/faq', docPath: 'guides/faq.md' },
     ]
   },
