@@ -134,7 +134,10 @@ export default function MarkdownPage() {
             <img src={resolveImageSrc(src)} alt={alt ?? ''} loading="lazy" {...props} />
           ),
           code: ({ node, inline, className, children, ...props }: any) => {
-            if (inline) {
+            const text = String(children ?? '')
+            // rehypeRaw may break inline code into block; force inline if no newlines and short
+            const isReallyInline = (!text.includes('\n') && text.length < 200) || inline === true
+            if (isReallyInline) {
               return (
                 <code className={className} {...props}>
                   {children}
@@ -143,11 +146,11 @@ export default function MarkdownPage() {
             }
             return (
               <CodeBlock className={className}>
-                {String(children)}
+                {text}
               </CodeBlock>
             )
           },
-          pre: ({ children }: any) => <>{children}</>,
+          pre: ({ children }: any) => <pre>{children}</pre>,
         }}
       >
         {content}

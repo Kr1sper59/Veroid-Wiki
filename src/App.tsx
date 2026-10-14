@@ -32,6 +32,14 @@ export default function App() {
           <Route path="community/optimization" element={<MarkdownPage />} />
           <Route path="community/zapret" element={<MarkdownPage />} />
           <Route path="guides/voicechat" element={<MarkdownPage />} />
+          <Route path="guides/mods" element={<MarkdownPage />} />
+          <Route path="guides/terms" element={<MarkdownPage />} />
+          <Route path="guides/panel" element={<MarkdownPage />} />
+          <Route path="guides/backups" element={<MarkdownPage />} />
+          <Route path="guides/worlds" element={<MarkdownPage />} />
+          <Route path="guides/permissions" element={<MarkdownPage />} />
+          <Route path="guides/resourcepack" element={<MarkdownPage />} />
+          <Route path="guides/faq" element={<MarkdownPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

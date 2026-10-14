@@ -4,7 +4,7 @@
 Для начала нужно установить последнюю поддерживаемую версию плагина для Velocity и непосредственно для самого Bukkit сервера. (https://github.com/plasmoapp/plasmo-voice/releases/tag/2.1.0-SNAPSHOT)
 
 **Далее, перейдем к самому серверу Velocity**
-Открываем файл `PlasmoVoice/config.toml` и заполняем следующим образом:
+Открываем файл **PlasmoVoice/config.toml** и заполняем следующим образом:
 
 ```
 default_language = "ru_ru"

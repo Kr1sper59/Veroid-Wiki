@@ -330,6 +330,7 @@ body::before {
   border-radius: 5px;
   color: #e6edf3;
   border: 1px solid var(--md-border);
+  display: inline !important;
 }
 
 .md-content pre code {
@@ -337,6 +338,7 @@ body::before {
   padding: 0;
   color: inherit;
   border: 0;
+  display: block !important;
 }
 
 .md-code-block {
