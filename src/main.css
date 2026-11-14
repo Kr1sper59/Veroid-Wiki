@@ -195,7 +195,7 @@ body::before {
   margin-left: 340px;
   margin-right: 2rem;
   padding: 2rem;
-  max-width: 1120px;
+  max-width: 750px;
 }
 
 .md-main__content--no-sidebar {
@@ -496,7 +496,6 @@ body::before {
 }
 
 .md-content .markdown-alert-note .markdown-alert-title::before {
-  content: "ℹ";
   font-size: 1.2em;
 }
 
@@ -510,7 +509,6 @@ body::before {
 }
 
 .md-content .markdown-alert-important .markdown-alert-title::before {
-  content: "❗";
   font-size: 1.2em;
 }
 
@@ -524,7 +522,6 @@ body::before {
 }
 
 .md-content .markdown-alert-warning .markdown-alert-title::before {
-  content: "⚠";
   font-size: 1.2em;
 }
 
@@ -538,7 +535,6 @@ body::before {
 }
 
 .md-content .markdown-alert-caution .markdown-alert-title::before {
-  content: "🔥";
   font-size: 1.2em;
 }
 
@@ -552,7 +548,6 @@ body::before {
 }
 
 .md-content .markdown-alert-tip .markdown-alert-title::before {
-  content: "💡";
   font-size: 1.2em;
 }
 
@@ -962,7 +957,7 @@ body::before {
   .md-toc {
     display: none;
   }
-  
+
   .md-main__content {
     margin-right: 5vw;
     max-width: 1120px;
