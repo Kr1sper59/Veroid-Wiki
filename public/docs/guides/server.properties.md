@@ -1,3 +1,7 @@
+---
+hideToc: true
+---
+
 # Server.properties
 Server.properties - файл с основными настройками сервера.
 

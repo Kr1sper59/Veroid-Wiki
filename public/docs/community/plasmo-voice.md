@@ -1,3 +1,8 @@
+---
+author: makromjc
+authorDiscord: https://discord.com/users/445773061048762370
+---
+
 # Настройка PlasmoVoice в связке с Velocity
 
 **С чего стоит начинать?**
@@ -60,7 +65,3 @@ bitrate = -1000
 ```
 
 Заходим на сервер и проверяем
-
----
-
-### Автор статьи - [makromjc](https://discord.com/users/445773061048762370)

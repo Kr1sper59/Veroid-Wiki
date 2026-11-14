@@ -1,3 +1,7 @@
+---
+hideToc: true
+---
+
 # Veroid Wiki
 
 Добро пожаловать в Wiki хостинга **Veroid**.

@@ -1,3 +1,7 @@
+---
+hideToc: true
+---
+
 # Veroid Wiki
 
 Добро пожаловать в Wiki хостинга **Veroid**.
@@ -10,6 +14,9 @@
 - [Введение](guides/core)
 - [Терминология хостинга](guides/terms)
 - [Работа с панелью](guides/panel)
+- [Бэкапы](guides/backups)
+- [Миры](guides/worlds)
+- [Права (Permissions)](guides/permissions)
 - [Ядра](guides/core)
 - [Смена версии](guides/version)
 - [Плагины](guides/plugins)

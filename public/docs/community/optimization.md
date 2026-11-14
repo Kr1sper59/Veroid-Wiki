@@ -1,3 +1,8 @@
+---
+author: roudezz
+authorDiscord: https://discord.com/users/1290944451459678218
+---
+
 # Как оптимизировать свой сервер Minecraft
 
 Шаг 1 - Железо и ядра
@@ -76,7 +81,3 @@ Lithium - Общая оптимизация механик
 FerriteCore - Оптимизация использования памяти
 Krypton - Оптимизация сети
 Sodium - Клиентский, но если на сервере есть Iris, то нужен.
-
----
-
-### Автор статьи - [roudezz](https://discord.com/users/1290944451459678218)
